@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bellas Unhas - Blog</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/estilo.css' %}">
+</head>
+<body>
+
+	<div id="area-cabecalho">
+		
+		<div id="area-logo">
+			<h1>Bellas <span class="branco"> Unhas</span></h1>
+		</div>
+		<div id="area-menu">
+			<a href="{% url 'home_blog' %}">Home</a>
+			<a href="">Blog</a>
+			<a href="">Sobre</a>
+			<a href="{% url 'contato' %}">Contato</a>
+		</div>
+
+	</div>
+
+	<div id="area-principal">
+
+		<div id="area-postagens">
+			
+			<!-- abertura postagem -->
+			<div class="postagem">
+				<h2>{{post.title}}</h2>
+                <h3>{{post.sub_title}}</h3>
+				<p> {{ post.content }}</p>
+				
+				{% if post.imagem %}
+					<img src="{% static 'post.imagem.url' % }" alt="" 
+					with="150px" height="120px">						
+				{%else%}
+					<img width="100px" src="{% static 'images/imagem8.jpeg' %}">
+				{% endif %}
+
+			</div><!--// fechamento postagem -->
+			<a href="{% url 'home_blog' %}" class="button">Voltar</a>
+		</div>
+		<div id="area-lateral">	
+
+			<div class="conteudo-lateral">
+				<h3>Postagens recentes</h3>
+				
+				<div class="postagem-lateral">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<a href="">Leia mais</a>
+				</div>
+
+				<div class="postagem-lateral" style="border-bottom: none;">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<a href="">Leia mais</a>
+				</div>
+
+			</div>
+
+			<div class="conteudo-lateral">
+				<h3>Categorias</h3>
+				
+				<a href="">Jogos</a><br>
+				<a href="">Celulares</a><br>
+				<a href="">Informática</a><br>
+				<a href="">Eletrônicos</a><br>
+				<a href="">Jogos</a><br>
+
+			</div>
+
+		</div>
+
+		<div id="rodape">
+			Todos os direitos reservados
+		</div>
+
+	</div>
+</body>
+</html>
