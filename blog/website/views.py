@@ -34,3 +34,6 @@ def save_form(request):
 def contato(request):
       return render(request, 'contato.html')
 
+def sobre_bellas_unhas(request):
+      return render(request, 'sobre_bellas_unhas.html')
+

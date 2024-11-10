@@ -40,4 +40,5 @@ class Post(models.Model):
         #return self.get_categories_display()
         return self.categories
     
+    
     full_name.admin_order_field = 'title'

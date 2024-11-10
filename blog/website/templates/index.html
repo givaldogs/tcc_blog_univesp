@@ -16,7 +16,7 @@
 		<div id="area-menu">
 			<a href="/blog">Home</a>
 			<a href="">Blog</a>
-			<a href="">Sobre</a>
+			<a href="{% url 'sobre' %}">Sobre</a>
 			<a href="{% url 'contato' %}">Contato</a>
 		</div>
 
@@ -35,15 +35,16 @@
 					-->
 					<!--
 					<img width="100px" src="{% static 'images/imagem6.jpeg' %}">
+					<img src="{{post.imagem.url}}" alt="" 
 					-->
+										
 					{% if post.imagem %}
-						<img src="{{post.imagem.url}}" alt="" 
+						<img src="{{post.imagem}}" alt="" 
 						with="150px" height="120px">
 					{%else%}
 						<img width="100px" height="120px"
 						src="{% static 'images/imagem8.jpeg' %}">
 					{% endif %}
-		
 				
 					<p>
 						{{ post.sub_title }}

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bellas Unhas - Contato recebido</title>
+	<title>Bellas Unhas - Sobre</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/estilo.css' %}">
 </head>
@@ -21,18 +21,30 @@
 			<a href="{% url 'sobre' %}">Sobre</a>
 			<a href="{% url 'contato' %}">Contato</a>
 		</div>
-
 	</div>
 
 	<div id="area-principal">
 
 		<div id="area-postagens">
 
-            <h3>Obrigado {{name_contact}}, seu contato recebido</h3>
-            <br>
-            <br>
-            <br>
-            <a href="{% url 'contato' %}" class="button">Voltar</a>
+            <h2>Sobre a Bellas Unhas</h2>
+			<p>
+				Lorem Ipsum é simplesmente um texto modelo da indústria 
+				tipográfica e de impressão. Lorem Ipsum tem sido o texto 
+				modelo padrão da indústria desde os anos 1500, quando um 
+				impressor desconhecido pegou uma galera de tipos e os 
+				embaralhou para fazer um livro de espécimes de tipos. 
+				Ele sobreviveu não apenas cinco séculos, mas também ao 
+				salto para a composição eletrônica, permanecendo 
+				essencialmente inalterado. Foi popularizado na década 
+				de 1960 com o lançamento das folhas Letraset contendo 
+				+passagens do Lorem Ipsum e, mais recentemente, com 
+				softwares de editoração eletrônica como o Aldus PageMaker, 
+				incluindo versões do Lorem Ipsum.
+
+			</p>
+            <br><br>
+			<a href="{% url 'home_blog' %}" class="button">Voltar</a>
             
 		</div>
 
