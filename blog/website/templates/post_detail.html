@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bellas Unhas - Blog</title>
+	<title>Bellas Unhas - Blog Detalhe</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/estilo.css' %}">
 </head>
@@ -32,11 +32,60 @@
                 <h3>{{post.sub_title}}</h3>
 				<p> {{ post.content }}</p>
 				
-				{% if post.imagem %}
-					<img src="{% static 'post.imagem.url' % }" alt="" 
-					with="150px" height="120px">						
-				{%else%}
-					<img width="100px" src="{% static 'images/imagem8.jpeg' %}">
+				{% if post.imagem %}	
+					<img src="{{ post.imagem.url }}" alt="Imagem do post" 
+						with="100px" height="120px">	
+					{%elif post.id == 1 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem8.jpeg' %}">
+					{%elif post.id == 2 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem6.jpeg' %}">
+					{%elif post.id == 3 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem7.jpeg' %}">
+					{%elif post.id == 4 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem9.jpeg' %}">
+					{%elif post.id == 5 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem10.jpeg' %}">
+					{%elif post.id == 6 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem11.jpeg' %}">
+					{%elif post.id == 7 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem12.jpeg' %}">
+					{%elif post.id == 8 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem13.jpeg' %}">
+					{%elif post.id == 9 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem14.jpeg' %}">
+					{%elif post.id == 10 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem15.jpeg' %}">
+					{%elif post.id == 11 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem16.jpeg' %}">
+					{%elif post.id == 12 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem17.jpeg' %}">
+					{%elif post.id == 13 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem18.jpeg' %}">
+					{%elif post.id == 14 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem19.jpeg' %}">
+					{%elif post.id == 15 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem20.jpeg' %}">
+					{%elif post.id == 16 %}
+						<img width="100px" height="120px"
+						src="{% static 'images/imagem21.jpeg' %}">
+					{% else %}
+					<img width="100px" height="120px"
+						src="{% static 'images/imagem8.jpeg' %}">					
 				{% endif %}
 
 			</div><!--// fechamento postagem -->

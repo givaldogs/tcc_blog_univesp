@@ -30,18 +30,12 @@
 			<div class="postagem">
 				{% for post in posts %}
 					<h2>{{ post.title }}</h2>
-					<!--
-					<span class="data-postagem">postado 25 outubro 2024</span>
-					-->
-					<!--
-					<img width="100px" src="{% static 'images/imagem6.jpeg' %}">
-					<img src="{{post.imagem.url}}" alt="" 
-					-->
-										
+															
 					{% if post.imagem %}
-						<img src="{{post.imagem}}" alt="" 
-						with="150px" height="120px">
-					{%else%}
+						<img src="{{ post.imagem.url }}" 
+						alt="Imagem do post" width="100px" 
+						height="120px">						
+					{% else %}
 						<img width="100px" height="120px"
 						src="{% static 'images/imagem8.jpeg' %}">
 					{% endif %}

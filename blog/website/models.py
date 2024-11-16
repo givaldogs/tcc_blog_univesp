@@ -36,8 +36,6 @@ class Post(models.Model):
         return self.title + self.sub_title
     
     def get_category_label(self):
-        #return  self.categories.__dict__
-        #return self.get_categories_display()
         return self.categories
     
     
