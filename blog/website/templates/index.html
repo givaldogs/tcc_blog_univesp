@@ -27,38 +27,37 @@
 		<div id="area-postagens">
 			
 			<!-- abertura postagem -->
-			<div class="postagem">
+			<div class="postagens-grid">
 				{% for post in posts %}
-					<h2>{{ post.title }}</h2>
+					<div class="postagem">
+						<h2>{{ post.title }}</h2>
 															
-					{% if post.imagem %}
-						<img src="{{ post.imagem.url }}" 
-						alt="Imagem do post" width="100px" 
-						height="120px">						
-					{% else %}
-						<img width="100px" height="120px"
-						src="{% static 'images/imagem8.jpeg' %}">
-					{% endif %}
+						{% if post.imagem %}
+							<img src="{{ post.imagem.url }}" 
+							alt="Imagem do post" width="100px" 
+							height="120px">						
+						{% else %}
+							<img width="100px" height="120px"
+							src="{% static 'images/imagem8.jpeg' %}">
+						{% endif %}
 				
-					<p>
-						{{ post.sub_title }}
-						<br>					
-						{{ post.get_category_label }}
-					</p>
+						<p>
+							{{ post.sub_title }}
+							<br>
+							{{ post.get_categories_display }}
+
+						</p>
 					
-					<a href="{% url 'post_detail' post.id %}" class="button">Leia mais</a>
-					<br><br>
-					<hr>
-                     
-					<!--<a href="">Leia mais</a>-->
+						<a href="{% url 'post_detail' post.id %}" class="button">Leia mais</a>
+						<br>
+						<hr>				
+					</div>
 					
 				{% endfor %}
 			</div><!--// fechamento postagem -->
-
 		</div>
-		<div id="area-lateral">
-			
 
+		<div id="area-lateral">
 			<div class="conteudo-lateral">
 				<h3>Postagens recentes</h3>
 				

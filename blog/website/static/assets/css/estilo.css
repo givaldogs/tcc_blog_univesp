@@ -45,6 +45,13 @@ body {
 	background: white;
 }
 
+/* Estilo da grid de postagens */
+.postagens-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Definir duas colunas */
+    gap: 05px; /* Espaçamento entre as colunas */
+    padding: 02px;
+}
 .conteudo-lateral {
 	background: white;
 	padding: 10px;
@@ -119,9 +126,5 @@ h3 {
 	margin-bottom: 10px;
 	display: block;
 }
-
-
-
-
 
 

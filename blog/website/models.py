@@ -35,8 +35,8 @@ class Post(models.Model):
     def full_name(self):
         return self.title + self.sub_title
     
-    def get_category_label(self):
-        return self.categories
+    # def get_category_label(self):
+    #     return self.categories
     
     
     full_name.admin_order_field = 'title'
