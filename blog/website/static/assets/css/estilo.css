@@ -50,7 +50,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Definir duas colunas */
     gap: 05px; /* Espaçamento entre as colunas */
-    padding: 02px;
+    padding: 03px;
 }
 .conteudo-lateral {
 	background: white;
